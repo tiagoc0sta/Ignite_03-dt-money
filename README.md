@@ -8,3 +8,5 @@
 - radix
 - styled-components
 - restfull API - json-server
+- context API 
+- reduce
