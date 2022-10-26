@@ -12,10 +12,19 @@
     {
       "id": 2,
       "description": "Hamburger",
-      "type": "income",
+      "type": "outcome",
       "category": "Vendas",
-      "price": 14000,
+      "price": 60,
       "createdAt": "2022-10-26T00:49:21.438Z"
+    },
+
+    {
+      "id": 3,
+      "description": "Ignite",
+      "type": "outcome",
+      "category": "Educação",
+      "price": 1980,
+      "createdAt": "2022-10-26T00:55:21.438Z"
     }
   ]
 }

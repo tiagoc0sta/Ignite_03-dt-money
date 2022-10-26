@@ -1,20 +1,14 @@
-import { useEffect } from "react";
+import { useContext, useEffect, useState } from "react";
 import { Header } from "../../compponents/Header";
 import { Summary } from "../../compponents/Summary";
+import { TransactionsContext } from "../../contexts/TransactionsContext";
 import { SearchForm } from "./components/SearchForm";
 import { PriceHighLight, TransactionsContainer, TransactionsTable } from "./styles";
 
-export function Transactions () {
-    async function loadTransactions() {
-      const response = await fetch('http://localhost:3000/transactions')
-      const data = await response.json();
 
-      console.log(data);
-    }
-  
-  useEffect(() => {
-    loadTransactions()       
-  }, [])
+
+export function Transactions () {
+  const { transactions } = useContext(TransactionsContext);
 
   return (
     <div>
@@ -26,28 +20,23 @@ export function Transactions () {
       <TransactionsTable>
         <table>
             <tbody>
-              <tr>
-                <td width="58%">Desenvolvimento de site</td>
-               
-                <td>
-                  <PriceHighLight variant="income">
-                    R$ 12.000,00
-                  </PriceHighLight>
-                  </td>                
-                <td>Venda</td>
-                <td>13/04/2022</td>
-              </tr>
+              {transactions.map(transaction => {
+                return (
+                  <tr key={transaction.id}>
+                    <td width="58%">{transaction.description}</td>
+                  
+                    <td>
+                      <PriceHighLight variant={transaction.type}>
+                        {transaction.price}
+                      </PriceHighLight>
+                      </td>                
+                    <td>{transaction.category}</td>
+                    <td>{transaction.createdAt}</td>
+                  </tr>
+                )
+              })}             
 
-              <tr>
-                <td width="50%">Hamburger</td>
-                <td>
-                  <PriceHighLight variant="outcome">
-                    - R$ 59,00
-                  </PriceHighLight>
-                </td>
-                <td>Alimentação</td>
-                <td>10/04/2022</td>
-              </tr>          
+                      
             </tbody>
           </table>
       </TransactionsTable>       
