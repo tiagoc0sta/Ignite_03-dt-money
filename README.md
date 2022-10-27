@@ -8,3 +8,6 @@
 - radix
 - styled-components
 - restfull API - json-server
+- context API 
+- reduce
+- React Hook Form
