@@ -12,3 +12,4 @@
 - reduce
 - React Hook Form
 - zod
+- resolvers
