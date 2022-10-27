@@ -11,3 +11,4 @@
 - context API 
 - reduce
 - React Hook Form
+- zod
