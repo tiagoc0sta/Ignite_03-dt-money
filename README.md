@@ -16,3 +16,5 @@
 - axios = http request library
 - eslint
 - react developer tools
+- use-context-selector
+- scheduler
