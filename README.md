@@ -13,3 +13,5 @@
 - React Hook Form
 - zod
 - resolvers
+- axios = http request library
+- eslint
