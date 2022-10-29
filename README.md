@@ -1,10 +1,8 @@
 
 # API Consumption - ReactJS    
 
-
 Technologies used:
 
-Technologies used:
 - reactJS
 - typescript
 - phosphor-react
