@@ -15,3 +15,4 @@
 - resolvers
 - axios = http request library
 - eslint
+- react developer tools
