@@ -14,3 +14,4 @@
 - zod
 - resolvers
 - axios = http request library
+- eslint
